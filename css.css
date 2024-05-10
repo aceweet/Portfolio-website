@@ -47,6 +47,11 @@ li {
     font-size: 1em;
     color: white;
 }
+
+.normal {
+    font-style: normal;
+    margin-right: 3vw;
+}
 .ducky {
     width: 6vw;
     margin: 5vw;
@@ -145,6 +150,11 @@ p{
     color: rgb(255, 226, 0);
   }
   
+h6 {
+    margin-right: 5vw;
+    color: white;
+}
+
   .text {
     font-size: 10vw;
     letter-spacing: -.01em;
@@ -197,6 +207,10 @@ p{
   .smaller {
     font-size: 5vw;
     margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  .smallest {
+    font-size: 2vw;
     margin-top: 30px;
   }
   .smaller .red {
@@ -336,8 +350,8 @@ p{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-left: 10vw;
-    padding-right: 10vw;
+    padding-left: 3vw;
+    padding-right: 8vw;
 }
 
 .statistic-section {
@@ -353,7 +367,7 @@ p{
    margin-bottom: 0;
      text-align: center;
      font-weight: bold;
-   color: #fff;
+   color: rgb(255, 226, 0);
 }
 
 .stats-text {
@@ -380,12 +394,125 @@ p{
    display: table;
    color: #fff;
 }
+/*  */
 
+.skills {
+    list-style: none;
+    font-size: 15px;
+    padding: 0;
+    color: white;
+  }
+  .skills .skill {
+    display: block;
+    position: relative;
+    height: 20px;
+    margin: 10px auto;
+    width: 90%;
+  }
+  @media only screen and (min-width: 900px) {
+    .skills .skill {
+      display: inline-block;
+      width: 25%;
+      margin: 20px;
+    }
+  }
+  .skills .skill:before, .skills .skill:after {
+    content: "";
+    position: absolute;
+    border-radius: 20px;
+    margin-top: 40px;
+    color: white;
+  }
+  .skills .skill:before {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 10px;
+    background: #eeeeee;
+  }
+  .skills .skill:after {
+    background-color: white;
+    background: rgb(0, 0, 0);
+    height: 6px;
+    top: 2px;
+    right: 95%;
+    bottom: 2px;
+    left: 2px;
+    -webkit-animation: fill 2s both;
+    -moz-animation: fill 2s both;
+    animation: fill 2s both;
+  }
+  .skills .skill:nth-child(1):after {
+    -webkit-animation-delay: 0.5s;
+    -moz-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+  }
+  .skills .skill:nth-child(2):after {
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    animation-delay: 1s;
+  }
+  .skills .skill:nth-child(3):after {
+    -webkit-animation-delay: 1.5s;
+    -moz-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+  }
+  .skills .skill:nth-child(4):after {
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    animation-delay: 2s;
+  }
+  .skills .skill:nth-child(5):after {
+    -webkit-animation-delay: 2.5s;
+    -moz-animation-delay: 2.5s;
+    animation-delay: 2.5s;
+  }
+  .skills .skill[aria-label=novice]:after {
+    right: 75%;
+  }
+  .skills .skill[aria-label=average]:after {
+    right: 50%;
+  }
+  .skills .skill[aria-label=adept]:after {
+    right: 35%;
+  }
+  .skills .skill[aria-label=advanced]:after {
+    right: 20%;
+  }
+  .skills .skill[aria-label=elite]:after {
+    right: 10%;
+  }
+  .skills .skill[aria-label=pro]:after {
+    right: 2px;
+  }
+  .skills .skill[aria-label=l33tasuar]:after {
+    right: -10%;
+  }
+  
+  @-webkit-keyframes fill {
+    from {
+      right: 100%;
+    }
+  }
+  @-moz-keyframes fill {
+    from {
+      right: 100%;
+    }
+  }
+  @keyframes fill {
+    from {
+      right: 100%;
+    }
+  }
+  /*  */
 @media (max-width: 992px) {
    .counter {
        margin-bottom: 40px;
    }
 }
+/*  */
+
 
   
 

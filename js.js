@@ -16,7 +16,7 @@ textElements.forEach((text) => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  var observer = new IntersectionObserver(function (entries) {
+  let observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
         startCounting(entry.target);
@@ -24,23 +24,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  var counters = document.querySelectorAll(".count-number");
+  let counters = document.querySelectorAll(".count-number");
 
   counters.forEach(function (counter) {
     observer.observe(counter);
   });
 
   function startCounting(element) {
-    var startValue = parseInt(element.dataset.start, 10); // Retrieve the starting value from the data-start attribute
-    var endValue = parseInt(element.dataset.target, 10);
-    var duration = 1000;
+    let startValue = parseInt(element.dataset.start, 10); // Retrieve the starting value from the data-start attribute
+    let endValue = parseInt(element.dataset.target, 10);
+    let duration = 1000;
 
-    var range = endValue - startValue;
-    var current = startValue;
-    var increment = endValue > startValue ? 1 : -1;
-    var stepTime = Math.abs(Math.floor(duration / range));
+    let range = endValue - startValue;
+    let current = startValue;
+    let increment = endValue > startValue ? 1 : -1;
+    let stepTime = Math.abs(Math.floor(duration / range));
 
-    var timer = setInterval(function () {
+    let timer = setInterval(function () {
       current += increment;
       element.textContent = current;
 
@@ -50,3 +50,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }, stepTime);
   }
 });
+
+//
