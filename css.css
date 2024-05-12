@@ -238,6 +238,10 @@ h6 {
     width: 90%;
   }
 
+  /*  */
+
+  /*  */
+
   @media only screen and (min-width: 300px) and (max-width: 360px){
     .container {
         height: 43vh;
